@@ -18,7 +18,7 @@ var twitterRestClient = new Twitter.RestClient(
 
 // Base URL
 
-var baseUrl = 'http://www.metmuseum.org/api/collection/collectionlisting?department=14&offset=100&&perPage=100&showOnly=highlights%7CwithImage&page=';
+var baseUrl = 'http://www.metmuseum.org/api/collection/collectionlisting?department=14&offset=100&&perPage=100&showOnly=highlights&page=';
 
 wordfilter.addWords(['Coin','Fragment','Cover', "Bottle", "Allah"]);
 
@@ -83,8 +83,9 @@ function strip() {
   var hafiz_quote = fs.readFileSync('./quotes/hafiz.txt').toString('utf-8').split("\n");
   var darwish_quote = fs.readFileSync('./quotes/darwish.txt').toString('utf-8').split("\n");
   var ghazali_quote = fs.readFileSync('./quotes/al_ghazali.txt').toString('utf-8').split("\n");
+  var pamuk_quote = fs.readFileSync('./quotes/pamuk.txt').toString('utf-8').split("\n");
 
-  authors.push(rumi_quote, hafiz_quote, darwish_quote, ghazali_quote);
+  authors.push(rumi_quote, hafiz_quote, darwish_quote, ghazali_quote, pamuk_quote);
   var n = Math.floor((Math.random() * authors.length));
   var pick_author = authors[n];
 
@@ -110,9 +111,10 @@ function tweet() {
     function(error, result) {
       if (error) {
         console.log('Error: ' + (error.code ? error.code + ' ' + error.message : error.message));
+        process.exit()
       }
       if (result) {
-        console.log("It worked");
+        console.log("Uploaded quote tweet");
       }
     });
   }
@@ -131,9 +133,10 @@ function tweet() {
       function(error, result) {
         if (error) {
           console.log('Error: ' + (error.code ? error.code + ' ' + error.message : error.message));
+          process.exit();
         }
         if (result) {
-          console.log("It worked");
+          console.log("Uploaded MET image tweet");
         }
       });
     }
