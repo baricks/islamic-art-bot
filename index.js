@@ -18,7 +18,7 @@ var twitterRestClient = new Twitter.RestClient(
 
 // Base URL
 
-var baseUrl = 'http://www.metmuseum.org/api/collection/collectionlisting?department=14&offset=100&&perPage=100&showOnly=highlights&page=';
+var baseUrl = 'http://www.metmuseum.org/api/collection/collectionlisting?department=14&perPage=100&showOnly=withImage&sortBy=Relevance&offset=';
 
 wordfilter.addWords(['Coin','Fragment','Cover', "Bottle", "Allah"]);
 
@@ -39,8 +39,9 @@ function generate() {
 // Make the request
 
 console.log('Going to request');
-  var url = baseUrl + Math.floor((Math.random() * 54) + 1); // Pick a random page
-  //console.log(url)
+  var offset_number = Math.floor((Math.random() * 119) + 1)
+  var url = baseUrl + offset_number + '00'; // Pick a random page
+  console.log(url)
   request(url, function (error, response, body) {
     //console.log('reqed',error, response.statusCode);
     if (!error && response.statusCode == 200) {
