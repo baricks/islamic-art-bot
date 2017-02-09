@@ -1,6 +1,5 @@
 import bs4
 import urllib2
-import html2text
 from random import randint
 
 # Run the following commands in the terminal to clean up the .txt file:
