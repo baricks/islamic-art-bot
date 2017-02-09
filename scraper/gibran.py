@@ -28,11 +28,3 @@ for i in range(1,66):
             if only_roman_chars(quote.text) is True:
                 quote_final = quote.text.encode("utf-8")
                 print quote_final
-
-# Run the following commands in the terminal to clean up the .txt file:
-# python gibran.py > gibran.txt
-# sed -i.bak '/Kahlil Gibran/d' ./gibran.txt
-# sed -i.bak '/    ―/d' ./gibran.txt
-# sed -i.bak '/^$/d' ./gibran.txt
-# sed -i.bak 's/^[ \t]*//' ./gibran.txt
-# sed -i.bak 's/$/ -Kahlil Ghibran/ ./gibran.txt

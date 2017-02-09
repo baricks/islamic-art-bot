@@ -32,13 +32,6 @@ for i in range(1,23):
                 quote_final = quote.text.encode("utf-8")
                 print quote_final
 
-# Run the following commands in the terminal to clean up the .txt file:
-# python pamuk.py > pamuk.txt
-# sed -i.bak '/Orhan Pamuk/d' ./pamuk.txt
-# sed -i.bak '/    ―/d' ./pamuk.txt
-# sed -i.bak '/^$/d' ./pamuk.txt
-# sed -i.bak 's/^[ \t]*//' ./pamuk.txt
-
 
 # Second, run code below for AZQuotes quotes.
 

@@ -2,13 +2,6 @@ import bs4
 import urllib2
 from random import randint
 
-# Run the following commands in the terminal to clean up the .txt file:
-# python rumi.py > rumi.txt
-# sed -i.bak '/Jalaluddin Rumi/d' ./rumi.txt
-# sed -i.bak '/    ―/d' ./rumi.txt
-# sed -i.bak '/^$/d' ./rumi.txt
-# sed -i.bak 's/^[ \t]*//' ./rumi.txt
-
 # Create baseUrl
 
 baseUrl = "https://www.goodreads.com/author/quotes/875661.Jalaluddin_Rumi?page="

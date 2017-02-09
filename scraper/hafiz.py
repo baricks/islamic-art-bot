@@ -2,9 +2,6 @@ import bs4
 import urllib2
 from random import randint
 
-# Run the following commands in the terminal to clean up the .txt file:
-# sed -i.bak 's/$/"/' hafiz.txt
-
 # Create baseUrl
 
 baseUrl = "http://www.azquotes.com/author/37991-Hafez?page="
