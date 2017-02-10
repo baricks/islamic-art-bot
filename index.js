@@ -20,7 +20,7 @@ var twitterRestClient = new Twitter.RestClient(
 
 var baseUrl = 'http://www.metmuseum.org/api/collection/collectionlisting?department=14&perPage=100&showOnly=withImage&sortBy=Relevance&offset=';
 
-wordfilter.addWords(['Coin','Fragment','Cover', "Bottle", "Allah"]);
+wordfilter.addWords(['Coin','Fragment','Cover', "Bottle"]);
 
 // Pick random item from the page
 
@@ -89,8 +89,9 @@ function strip() {
   var kanafani_and_halim_quotes = fs.readFileSync('./quotes/kanafani_and_halim.txt').toString('utf-8').split("\n");
   var qabbani_quote = fs.readFileSync('./quotes/qabbani.txt').toString('utf-8').split("\n");
   var mahfouz_quote = fs.readFileSync('./quotes/mahfouz.txt').toString('utf-8').split("\n");
+  var saadawi_quote = fs.readFileSync('./quotes/saadawi.txt').toString('utf-8').split("\n");
 
-  authors.push(rumi_quote, hafiz_quote, darwish_quote, ghazali_quote, pamuk_quote, gibran_quote, kanafani_and_halim_quotes, qabbani_quote, mahfouz_quote);
+  authors.push(saadawi_quote, rumi_quote, hafiz_quote, darwish_quote, ghazali_quote, pamuk_quote, gibran_quote, kanafani_and_halim_quotes, qabbani_quote, mahfouz_quote);
   var n = Math.floor((Math.random() * authors.length));
   var pick_author = authors[n];
 
