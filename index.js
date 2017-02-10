@@ -86,10 +86,11 @@ function strip() {
   var ghazali_quote = fs.readFileSync('./quotes/al_ghazali.txt').toString('utf-8').split("\n");
   var pamuk_quote = fs.readFileSync('./quotes/pamuk.txt').toString('utf-8').split("\n");
   var gibran_quote = fs.readFileSync('./quotes/gibran.txt').toString('utf-8').split("\n");
-  var kanafani_and_halif_quotes = fs.readFileSync('./quotes/kanafani_and_halif.txt').toString('utf-8').split("\n");
+  var kanafani_and_halim_quotes = fs.readFileSync('./quotes/kanafani_and_halim.txt').toString('utf-8').split("\n");
   var qabbani_quote = fs.readFileSync('./quotes/qabbani.txt').toString('utf-8').split("\n");
+  var mahfouz_quote = fs.readFileSync('./quotes/mahfouz.txt').toString('utf-8').split("\n");
 
-  authors.push(rumi_quote, hafiz_quote, darwish_quote, ghazali_quote, pamuk_quote, gibran_quote, kanafani_and_halif_quotes, qabbani_quote);
+  authors.push(rumi_quote, hafiz_quote, darwish_quote, ghazali_quote, pamuk_quote, gibran_quote, kanafani_and_halim_quotes, qabbani_quote, mahfouz_quote);
   var n = Math.floor((Math.random() * authors.length));
   var pick_author = authors[n];
 
